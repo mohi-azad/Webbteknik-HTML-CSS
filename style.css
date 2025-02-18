@@ -1,0 +1,1269 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.hero{
+	width: 100%;
+	min-height: 100vh;
+	background-position: center;
+	background-color: rgb(245, 245, 245);
+	background-size: cover; 
+	padding: 20px;
+}
+.wrapper{
+	width: 1170px;
+	margin: auto;
+}
+
+nav{
+	z-index: 1000;
+	position: sticky;
+	top: 0;
+	background-color: rgb(234, 234, 234);
+	width: 100%;
+	display: flex;
+	text-align: center;
+	font-size: 17px;
+	padding: 10px 0;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+}
+
+.hero nav h3{
+	font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.h1{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 15px;
+}
+nav ul{
+	display: inline-block;
+	list-style: none;
+	font-size:14px;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 15px;
+	text-decoration: none;	
+	color:black;
+}
+nav ul li a{
+	font-family: 'Crimson Pro', serif;
+	text-decoration: none;
+	color: #000000;
+	font-weight: 400;
+}
+
+nav ul li a:hover{
+	color: #15427a;
+}
+
+.hero-image{
+   width: 100%;
+}
+.hero-image img{
+	margin-top: 36px;
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	display:block;
+}
+
+.c-box22 {
+    width: 95%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    background-color: #d0cece;
+    border: 1px solid #c9bfbf;
+    margin-bottom: 30px;
+}
+
+/* Textcontainer */
+.tb {
+	font-family: 'Crimson Pro', serif;
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+.tb h3{
+	font-family: "Crimson Pro", serif;
+}
+.tb p{
+	font-family: "Crimson Text", serif;
+}
+
+/* Bildcontainer */
+.h-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Knappcontainer */
+.button-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* Knapp */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+.info-box {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	margin: auto;
+	color: white;
+	background-color: rgb(22, 23, 23);
+	border: 1px solid #c9bfbf;
+	margin-bottom: 30px;
+}
+  
+.info-content {
+	font-family: "Crimson Text", serif;
+	width: 90%; 
+    padding-right: 40px;
+	margin-left:10% ;
+	align-items: center;
+}
+
+.info-content h3 {
+	font-family: 'Crimson Pro', serif;
+    font-size: 24px;
+	margin-bottom: 10px;
+}
+.info-content p {
+	font-family: "Crimson Text", serif;
+    font-size: 15px;
+    line-height: 1.5; 
+}
+  
+.image-content{
+	width: 90%; 
+    text-align: left; 
+}
+
+.image-content img{
+	width: 100%;
+    max-width: 400px; 
+    max-height: 420px; 
+    height: auto;
+    object-fit: cover; 
+    border-radius: 5px;
+}
+
+.meet-box{
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	margin: auto;
+	background-color: #f8f2f2;
+	border: 1px solid #c9bfbf;
+	margin-bottom: 30px;
+}
+
+.image2-content {
+    width: 90%; 
+    text-align: left; 
+}
+.image2-content img {
+    width: 100%; 
+    max-width: 400px;
+	
+}
+.text2-content {
+    width: 90%; 
+    padding-right: 40px;
+	margin-left:10% ;
+	align-items: center;
+}
+.text2-content h3 {
+	font-family: 'Crimson Pro', serif;
+    font-size: 24px;
+	margin-bottom: 10px;
+}
+.text2-content p {
+	font-family: "Crimson Text", serif;
+    font-size: 15px;
+    color: black;
+    line-height: 1.5; 
+}
+.button2-container {
+	font-family: "Crimson Text", serif;
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px;
+}
+.btn2{
+	font-family: "Crimson Text", serif;
+	display: inline-block;
+	padding: 12px 24px;
+	font-size: 18px;
+	color:rgb(0, 0, 0);
+	background-color: #7fa2b4;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: 0.5s ease;
+}
+
+.button2-container a{
+	font-family: "Crimson Text", serif;
+}
+.btn2:hover{
+	color: aliceblue;
+	background-color: #838eb2;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(22, 23, 23);
+    color: white;
+    padding: 75px;
+    border-radius: 10px;
+    width: 90%;
+    margin: auto;
+}
+
+.header {
+	font-family: 'Crimson Pro', serif;
+    text-align: center;
+	font-size: 19px;
+    margin-bottom: 20px;
+    line-height: 1.5; 
+}
+.header h2{
+	font-family: 'Crimson Pro', serif;
+}
+
+.subheaders {
+    display: grid;
+	font-size: 15px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    text-align: center;
+    margin-top: 20px;
+}
+.subheaders p {
+	font-family: "Crimson Text", serif;
+    margin: 0;
+    padding: 5px 10px;
+}
+.custom-size {
+	margin: 35px auto;
+	display: block;
+	justify-content: center;
+	align-items: center;
+    width: 95%; 
+    height: auto; 
+}
+
+.wellcome-box{
+	width: 95%;
+	margin: 40px auto;
+	margin-bottom: 5px;
+	padding: 30px;
+	background-color:rgb(241, 244, 244);
+	border: 1px solid #b5afaf;
+	text-align: center;
+	box-shadow: 0px 4px 10px rgb(red, green, blue);
+}
+.wellcome-box h1 {
+	font-family: 'Crimson Pro', serif;
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.wellcome-box h3, 
+.wellcome-box h4 {
+	font-family: "Crimson Text", serif;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #0b0a0a;
+}
+.wellcome-box p {
+	font-family: "Crimson Text", serif;
+    font-size: 14px;
+    color: #0c0c0c;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+.wellcome-box hr {
+	font-family: "Crimson Text", serif;
+    border: 1px solid black;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.footer{
+	width: 100%; 
+    padding: 30px;
+	margin-top: 19px;
+	bottom: 0;
+    text-align: center;
+	background-color: rgb(12, 12, 12);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+.footer h3{
+	font-family: 'Crimson Pro', serif;
+	margin-top: 18px;
+    font-size: 18px;
+    color: #f9f6f6;
+}
+
+.s-links a {
+    margin-right: 35px; 
+    font-size: 24px; 
+    color: white; 
+}
+
+/* Tar bort extra marginal från sista ikonen */
+.s-links a:last-child {
+    margin-right: 0;
+}
+.s-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color:rgba(255, 255, 255, 0.1);
+	margin-top: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius:50%;
+	color: #e2dada;
+	transition: 0.5;
+}
+.s-links a:hover{
+	color:#24262b;
+	background-color:#ffffff ;
+}
+
+@media (max-width: 768px) {
+	.c-box22 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tb {
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .h-image {
+        max-width: 100%;
+    }
+
+	.hero-image img{
+		width: 100%;
+	}
+	.info-box {
+		flex-direction: column;
+		text-align: center;
+    }
+	.text-content,
+	.image-content {
+	  text-align: center;
+	}
+	.meet-box{
+		flex-direction: column;
+		align-items: center;
+	}
+	.text2-content,
+	.image2-content {
+	  text-align: center;
+	}
+	.container{
+		flex-direction: column;
+		align-items: center;
+	}
+	.header{
+		flex-direction: column;
+		align-items: center;
+	}
+	.subheaders{
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+/* Företag */
+/* Företag */
+/* Företag */
+/* Företag */
+/* Företag */
+/* Företag */
+
+.title{
+	margin-top: 50px;
+	justify-content: center;
+	color: #000000;
+	text-align: center;
+	font-size: 20px;
+}
+.title h2{
+	font-family: 'Crimson Pro', serif;
+}
+
+.f-box1{
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	align-items: center;
+	gap: 23px;
+	padding: 20px;
+	width: 95%;
+	margin: auto;
+	background-color: #d0cece;
+	border: 1px solid #c9bfbf;
+	margin-bottom: 30px;
+}
+  
+.f-content1 {
+	width: 90%;
+	flex: 1;
+	font-size: 1rem;
+	text-align: left;
+	justify-content: center;
+	align-items: center;
+}
+.f-content1 h3{
+	font-family: 'Crimson Pro', serif;
+}
+.f-content1 p{
+	font-family: "Crimson Text", serif;
+}
+  
+.f-image1 {
+	width: 90%;
+	height: 300px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.f-image1 img{
+	width: auto;
+	height:100%;
+}
+
+/* Knapplayout */
+.f-bot1 {
+	width: 100%;
+    display: flex;
+    justify-content: center; 
+	align-items: center;
+    margin-top: 20px;
+	padding: 6px 16px;
+}
+.f-bot1 a{
+	font-family: "Crimson Text", serif;
+}
+.b1 {
+    display: block;
+    width: fit-content; 
+    margin: 0 auto; 
+    padding: 8px 18px;
+    font-size: 16px;
+    color: rgb(4, 4, 4);
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+
+.btn3:hover{
+	color: rgb(37, 39, 41);
+	background-color: #838eb2;
+}
+
+.f-box {
+	width: 95%; 
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 23px;
+    padding: 55px 70px; 
+    background-color: #99b1de;
+    border: 1px solid #ada0a0;
+    margin: auto;
+}
+  
+.f-cont1 {
+	width: 90%;
+	flex: 1;
+	justify-content: center;
+	font-size: 1rem;
+	text-align: left;
+	margin: auto;
+}
+.f-cont1 h3{
+	font-family: 'Crimson Pro', serif;
+}
+.f-cont1 p{
+	font-family: "Crimson Text", serif;
+}
+  
+.f-image2 {
+	width: 48%;
+	flex-direction: column;
+	height: auto;
+	align-items: center;
+	text-align: center;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	margin: auto;
+}
+.f-image3 {
+	width: 68%;
+	flex-direction: column;
+	height: auto;
+	align-items: center;
+	text-align: center;
+	flex: 1;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+.f-image2 img, .f-image3 img {
+    max-width: 100%;  
+    height: auto;      
+    object-fit: cover; 
+}
+.kn {
+    display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+    padding: 3px 10px;
+    background: #212020;
+    color: rgb(235, 227, 227);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+	width: fit-content;
+}
+.kn a{
+	font-family: "Crimson Text", serif;
+}
+.kn:hover {
+    background: #1b354c;
+}
+
+.b5-con {
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+.b5-con a{
+	font-family: "Crimson Text", serif;
+}
+.btn5 {
+    display: inline-block; 
+    padding: 12px 20px;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    background-color: #7fa2b4;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s ease;
+}
+.btn5:hover{
+	color: aliceblue;
+	background-color: #838eb2;
+}
+
+.c-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+}
+
+.text-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.text-section h3 {
+	font-family: 'Crimson Pro', serif;
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.text-section p {
+	font-family: "Crimson Text", serif;
+    font-size: 16px;
+    color: #333;
+}
+
+.bb5-con {
+    margin-top: 10px;
+}
+.bb5-con a{
+
+	font-family: "Crimson Text", serif;
+}
+
+.btn5 {
+	justify-content: center;
+    display: inline-block;
+    padding: 10px 18px;
+    background: #007bff;
+    color: rgb(4, 4, 4);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn5:hover {
+    background: #204063;
+}
+
+.c-box5 {
+	margin: auto;
+	margin-bottom: 8px;
+    width: 95%;
+    padding: 38px;
+    background-color: rgb(241, 246, 248);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c5bfbf;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    gap: 20px;
+}
+.text-content5 {
+    width: 50%; 
+	color: #000000;
+	line-height: 1.6;
+}
+.text-content5 p{
+	margin-bottom: 25px;
+	font-family: "Crimson Text", serif;
+}
+
+.i5-content {
+	width: 20%;
+    display: flex;
+    gap: 10px;
+	width: 40%;
+}
+
+.i5-content img {
+	width: 50%;
+    max-width: 100%;
+}
+
+.btn6 {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #007bff;
+    color: rgb(8, 8, 8);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn6:hover {
+    background: #1b354c;
+}
+
+.footer-container {
+	margin: auto;
+    display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 90px; 
+    padding: 20px;
+    color: white;
+}
+.footer-section {
+    text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+.footer-section2{
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+}
+.footer-section h3 {
+	font-family: 'Crimson Pro', serif;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.footer-section2 h3{
+	font-family: 'Crimson Pro', serif;
+}
+.footer-section2 p{
+	font-family: "Crimson Text", serif;
+}
+.footer-section p {
+	font-family: "Crimson Text", serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+/* RESPONSIV DESIGN */
+@media (max-width: 770px) {
+    .f-box {
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .f-cont1 {
+        width: 95%;
+        max-width: 400px;
+		text-align: center;
+    }
+
+    .f-image2 {
+        flex-direction: column; 
+        align-items: center;
+    }
+	.f-image3 {
+        flex-direction: column; 
+        align-items: center;
+    }
+    .f-image2 img {
+        width: 50%; 
+    }
+	.f-image3 img {
+        width: 60%;
+    }
+	.kn{
+		margin: auto;
+		width: fit-content;
+		align-self: center;
+		width: 80%;
+		text-align: center;
+	}
+	.footer{
+		flex-direction:column;
+		text-align: center;
+	}
+	.footer-container{
+		flex-direction:column;
+		text-align: center;
+	}
+	.footer-section2{
+		flex-direction:column;
+		text-align: center;
+		height: 60px;
+	}
+	.k-box {
+		flex-direction: column;
+		text-align: center;
+		}
+		.k_content1,
+		.k-image1 {
+		  max-width: 100%;
+		}
+	.c-box2{
+		flex-direction: column;
+		text-align: center;
+	}
+	.text-content2{
+		width:100%;
+	}
+	.i2-content{
+		width: 100%;
+	}
+	.i2-content img{
+		max-width: 90%;
+	}
+}
+
+
+/* Portfolio */
+/* Portfolio */
+/* Portfolio */
+/* Portfolio */
+/* Portfolio */
+/* Portfolio */
+
+.text-c{
+	margin: auto;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	color: #ffffff;
+}
+.text-c h2{
+	font-family: 'Crimson Pro', serif;
+}
+.text-c p{
+	font-family: "Crimson Text", serif;
+}
+
+.p-box {
+	width: 95%;
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	align-items: center;
+	gap: 23px;
+	padding: 20px;
+	max-width: 1300px;
+	margin: auto;
+	background-color: #d0cece;
+	border: 1px solid #c9bfbf;
+	margin-bottom: 30px;
+  }
+  
+  .p-cont1 {
+	flex: 1;
+	min-width: 300px; 
+	max-width: 600px;
+	font-size: 1rem;
+	text-align: left;
+  }
+  .p-cont1 h3{
+	font-family: 'Crimson Pro', serif;
+  }
+  .p-cont1 p{
+	font-family: "Crimson Text", serif;
+  }
+  .portfolio h3{
+	font-family: 'Crimson Pro', serif;
+  }
+  .p-image1 {
+	height: 300px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+  }
+
+  .p-image1 img{
+	width: 55%;
+	height:100%;
+  }
+
+@media (max-width: 768px) {
+	.p-box {
+	  flex-direction: column;
+	  text-align: center;
+	}
+	.p_cont1,
+	.p-image1 {
+	    width: 90%; 
+        max-width: 300px;
+	}
+}
+
+.portfolio {
+    width: 95%;
+    min-height: 490px;
+    text-align: center; 
+    padding: 20px;
+    border: 1px solid #cbc6c6;
+    margin: auto; 
+    background-color: #fffdfd;
+    margin-bottom: 30px;
+}
+.portfolio h3{
+	font-family: 'Crimson Pro', serif;
+}
+
+.po-galleri {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    justify-items: center;
+    align-items: center; 
+    max-width: 900px; 
+    margin: auto;
+}
+
+.po-galleri img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    border-radius: 0px;
+}
+
+.arrow-cont {
+    display: flex;
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.arrow {
+	z-index: 0;
+    margin-top: -49px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 35px; 
+    height: 45px;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease; 
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.arrow:hover {
+    background-color: rgba(12, 12, 13, 0.3); 
+}
+
+.arrow span {
+    width: 15px;
+    height: 15px;
+    border-bottom: 5px solid #5a5d61;
+    border-right: 5px solid #5a5d61;
+    transform: rotate(45deg);
+    animation: scroll 4s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -.1s;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-3px, -3px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+}
+
+/* RESPONSIV DESIGN */
+@media (max-width: 768px) {
+    .po-galleri {
+        grid-template-columns: 1fr; /* Byter till en kolumn på mindre skärmar */
+        gap: 25px;
+    }
+
+    .po-galleri img {
+        width: 90%; /* Bilder blir lite mindre */
+        max-width: 300px;
+    }
+}
+ 
+.portfolio video{
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 55%;
+	border-radius: 0px;
+}
+@media (max-width: 768px) {
+    .po-galleri video {
+        max-width: 90%; 
+    }
+}
+
+/* Kontakt */
+/* Kontakt */
+/* Kontakt */
+/* Kontakt */
+/* Kontakt */
+
+.hero4{
+	background-position: center;
+	background-color: rgb(245, 245, 245);
+	background-size: cover; 
+	padding: 20px;
+}
+.wrapper{
+	width: 1170px;
+	margin: auto;
+}
+
+.k-1 {
+	width: 100%;
+    background-color: rgb(30, 28, 28);
+    border: 1px solid #c2bfbf;
+	text-align: center;	
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.k-box {
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	align-items: center;
+	gap: 23px;
+	padding: 20px;
+	max-width: 1200px;
+	margin: auto;
+	background-color: #d0cece;
+	border: 1px solid #c9bfbf;
+	margin-bottom: 30px;
+}
+  
+.k_content1 {
+	flex: 1;
+	min-width: 300px; 
+	max-width: 600px;
+	font-size: 1rem;
+	text-align: left;
+}
+.k_content1 h3{
+	font-family: 'Crimson Pro', serif;
+}
+.k_content1 p {
+	font-family: "Crimson Text", serif;
+}
+  
+.k-image1 {
+	height: 300px;
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.k-image1 img{
+	width: auto;
+	height:100%;
+}
+  
+@media (max-width: 768px) {
+	.k-box {
+		flex-direction: column;
+		text-align: center;
+    }
+	.k_content1,
+	.k-image1 {
+	  max-width: 40%;
+	  text-align: center;
+	}
+}
+
+.k-box2 {
+	display: flex;
+	flex-wrap: wrap; 
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 20px;
+	max-width: 1200px;
+	margin: auto;
+	background-color: #ffffff;
+	border: 1px solid #d3cccc;
+}
+
+.form-container {
+    flex: 1;
+	min-width: 300px;
+}
+.form-container h3{
+	font-family: 'Crimson Pro', serif;
+}
+.form-container p,label,button{
+	font-family: "Crimson Text", serif;
+}
+
+
+.k-image2 {
+	
+	flex: 1;
+	display: flex;
+	justify-content: center;
+  }
+
+  .k-image2 img{
+	width: auto;
+	height:50%;
+  }
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Bröllop */
+/* Bröllop */
+/* Bröllop */
+/* Bröllop */
+/* Bröllop */
+/* Bröllop */
+
+.ledig-con{
+	display: flex;
+	background-color: #f4f1f1;
+	align-items: center;
+	border: 1px solid #d7cfcf;
+	padding: 20px;
+}
+.booking-info{
+	flex: 1;
+	width: 50%;
+	padding: 20px;
+	text-align: left;
+	color: #000000;
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+.booking-info h3{
+	font-family: 'Crimson Pro', serif;
+}
+.booking-info li{
+	font-family: "Crimson Text", serif;
+	display: flex;
+	justify-content: center;
+	border-bottom: 1px solid #000000;
+	padding: 10px 0;
+	cursor: pointer;
+}
+.text-x h2{
+	font-family: 'Crimson Pro', serif;
+}
+
+.booking-btn{
+	font-family: "Crimson Text", serif;
+	display: block;
+    background: rgb(86, 171, 174);
+    color: rgb(19, 17, 17);
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: background 0.3s ease;
+    margin: 20px auto 0 auto; /* Centrera endast knappen */
+    text-align: center;
+    width: 200px; /* FIXAD bredd */
+}
+.booking-btn:hover{
+	background: #36487f;
+}
+.booking-image1{
+	flex: 1;
+	display: flex;
+	max-width: 50%;
+	justify-content: center;
+}
+.booking-image1 img{
+	max-width: 100%;
+	height: auto;
+}
+
+@media(max-width: 768px){
+	.ledig-con{
+		flex-direction: column;
+		text-align: center;
+	}
+	.booking-info{
+		flex-direction: column;
+		text-align: center;
+	}
+	.booking-image1{
+		margin-top: 20px;
+	}
+	.booking-btn{
+		width: 100px;
+	}
+}
+
+
+
+
+
+
+
