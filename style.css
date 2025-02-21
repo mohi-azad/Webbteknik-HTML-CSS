@@ -103,10 +103,10 @@ nav ul li a:hover{
 }
 .tb h1{
 	color: #2a2626;
-	font-family: "Crimson Pro", serif;
+	font-family: 'Crimson Pro', serif;
 }
 .tb h3{
-	font-family: "Crimson Text", serif;
+	font-family: 'Crimson Text', serif;
 	color: #4b4040;
 }
 
@@ -167,6 +167,7 @@ nav ul li a:hover{
 	margin-left:10% ;
 	align-items: center;
 }
+
 .info-content h3 {
 	font-family: 'Crimson Pro', serif;
     font-size: 24px;
@@ -190,6 +191,7 @@ nav ul li a:hover{
     border-radius: 500px;
 }
 
+/* Träffa din fotograf-box */
 .meet-box{
 	width: 95%;
 	display: flex;
@@ -317,7 +319,6 @@ nav ul li a:hover{
     color: #000000;
     margin-bottom: 10px;
 }
-.wellcome-box h3, 
 .wellcome-box h4 {
 	font-family: "Crimson Text", serif;
     margin-top: 20px;
@@ -662,6 +663,7 @@ nav ul li a:hover{
 	font-family: "Crimson Text", serif;
 }
 
+/* Knapp nr 5 */
 .btn5 {
 	justify-content: center;
     display: inline-block;
@@ -690,6 +692,8 @@ nav ul li a:hover{
     justify-content: space-between;
     gap: 20px;
 }
+
+/* Text nr 5 */
 .text-content5 {
     width: 50%; 
 	color: #000000;
@@ -726,6 +730,7 @@ nav ul li a:hover{
     background: #1b354c;
 }
 
+/* Sidfot */
 .footer-container {
 	margin: auto;
     display: flex;
@@ -765,6 +770,7 @@ nav ul li a:hover{
     font-size: 14px;
     line-height: 1.5;
 }
+
 /* RESPONSIV DESIGN */
 @media (max-width: 770px) {
     .f-box {
@@ -1175,7 +1181,6 @@ button:hover {
 	}
 }
 
-
 /* Bröllop */
 /* Bröllop */
 /* Bröllop */
@@ -1261,6 +1266,92 @@ button:hover {
 	}
 }
 
+/* Layout för utskrift */
+@media print {
+	 /* Dölj element som inte behövs vid utskrift */
+	 nav, .button2-container, .s-links, .footer {
+        display: none;
+    }
+    .hero h3 {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        max-height: 200px; /* Förhindrar att bilden blir för stor */
+        page-break-before: avoid;
+    }
+
+    /* Anpassa alla bilder */
+    .img {
+        max-width: 100%;
+        height: auto;
+        page-break-inside: avoid; /* Förhindrar att bilden delas över två sidor */
+    }
+
+    /* Justera storleken på specifika bilder */
+    .h-image {
+        width: 40%; /* Testa att justera denna om bilderna fortfarande är för stora */
+    }
+
+    /* Flytta ner info-boxen och förhindra sidbrytning mitt i den */
+    .info-box {
+        margin-top: 350px; /* Öka detta om du vill ha den ännu längre ner */
+		padding-top: 150px;
+        page-break-before: auto; /* Tvingar den att börja på en ny sida */
+        page-break-inside: avoid; /* Förhindrar att den delas över två sidor */
+    }
+	.image-content img, .image2-content img{
+		width: 50%;
+	}
+	
+	.meet-box{
+		page-break-before: auto;
+		page-break-inside: avoid;
+	}
+	/* Förhindra sidbrytning vid rubriker */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+	 /* Justera textstorlek för att spara plats och hålla layouten kompakt */
+	 p {
+        font-size: 12px;
+        line-height: 1.4;
+        page-break-inside: avoid;
+    }
+	.linepic{
+		page-break-after: auto;
+		page-break-inside: avoid;
+	}
+	.wellcome-box{
+		page-break-before: auto;
+	}
+	.k-box{
+		margin-top: 100px;
+	}
+	.k-box2{
+		page-break-before: always;
+	}
+	.f-bot1{
+		display: none;
+	}
+	.po-galleri{
+		
+		width: 50%; 
+	}
+	.portfolio{
+		page-break-before: always;
+	}
+	.btn5, .kn{
+		display: none;
+	}
+	.f-box{
+		page-break-before: always;
+		page-break-inside: avoid;
+	}
+}
 
 
 
