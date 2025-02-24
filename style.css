@@ -1283,20 +1283,14 @@ button:hover {
         max-height: 200px; /* Förhindrar att bilden blir för stor */
         page-break-before: avoid;
     }
-
-    /* Anpassa alla bilder */
     .img {
         max-width: 100%;
         height: auto;
         page-break-inside: avoid; /* Förhindrar att bilden delas över två sidor */
     }
-
-    /* Justera storleken på specifika bilder */
     .h-image {
         width: 40%; /* Testa att justera denna om bilderna fortfarande är för stora */
     }
-
-    /* Flytta ner info-boxen och förhindra sidbrytning mitt i den */
     .info-box {
         margin-top: 350px; /* Öka detta om du vill ha den ännu längre ner */
 		padding-top: 150px;
@@ -1306,7 +1300,6 @@ button:hover {
 	.image-content img, .image2-content img{
 		width: 50%;
 	}
-	
 	.meet-box{
 		page-break-before: auto;
 		page-break-inside: avoid;
