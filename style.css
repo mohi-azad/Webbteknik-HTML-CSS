@@ -18,7 +18,7 @@
 	margin: auto;
 }
 
-nav{
+.navbar{
 	z-index: 1000;
 	position: sticky;
 	top: 0;
@@ -26,12 +26,61 @@ nav{
 	background-color: #f9f6f6;
 	width: 100%;
 	display: flex;
-	text-align: center;
+	text-align: center; /* centrerar innehållet i element */
 	font-size: 17px;
 	padding: 10px 0;
-	align-items: center;
-	justify-content: space-between;
+	align-items: center; /* centrerar innehållet vertikalt */
+	justify-content: space-between; /* sprider ut innehållet så att första och sista element håller sig vid kanterna med mallanrum däremellan */
 	margin: 0;
+}
+
+.hamburger{
+	display: none;
+	cursor: pointer;
+}
+.bar{
+	display: block;
+	width: 24px;
+	height: 3px;
+	margin: 5px auto;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	background-color: #0f0e0e;
+}
+
+@media(max-width: 768px){
+	.hamburger{
+		display: block;
+		margin-right: 10px;
+	}
+	.hamburger.active .bar:nth-child(2){
+		opacity: 0;
+	}
+	.hamburger.active .bar:nth-child(1){
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .bar:nth-child(3){
+		transform: translateY(-8px) rotate(-45deg);
+	}
+	.nav-items{
+		display: flex;
+		position:fixed;
+		left: -100%;
+		top: 70px;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+		transition: 0.3s;
+		background-color: #f9f6f6;
+	}
+	.nav-items.active{
+		left: 0;
+	}
+}
+@media(max-width: 400px){
+	.nav-items{
+		width: 100%;
+	}
 }
 
 .hero nav h3{
@@ -1268,9 +1317,8 @@ button:hover {
 
 /* Layout för utskrift */
 @media print {
-	 /* Dölj element som inte behövs vid utskrift */
-	 nav, .button2-container, .s-links, .footer {
-        display: none;
+	.button2-container, .s-links, .footer {
+		display: none;
     }
     .hero h3 {
         display: block;
@@ -1304,12 +1352,10 @@ button:hover {
 		page-break-before: auto;
 		page-break-inside: avoid;
 	}
-	/* Förhindra sidbrytning vid rubriker */
     h1, h2, h3 {
         page-break-after: avoid;
     }
-	 /* Justera textstorlek för att spara plats och hålla layouten kompakt */
-	 p {
+	p {
         font-size: 12px;
         line-height: 1.4;
         page-break-inside: avoid;
