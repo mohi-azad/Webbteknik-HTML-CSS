@@ -37,6 +37,17 @@
 		<div class="hero-image">
 			<img src= "pic/b1.png" alt="bild1" >
 		</div>
+		<!--Knapp för att visa meddelandet "Hello,JavaScript!"-->
+		<div class="sms-container">
+			<button type="show-message" class="sms-box" onclick="openPopup()">Show Message</button>
+
+			<div class="popup" id="popup">
+				<img src="pic/hello.png">
+				<h1>Hello, JavaScript!</h1>
+				<p>Klick the button below to go back</p>
+				<button type="button" onclick="closePopup()">OK</button>
+			</div>
+		</div>
 
 		<br><br><br>
 
@@ -154,8 +165,3 @@
 	</div>
 	<script src="Script.js"></script>
 </body>
-
-
-
-
-

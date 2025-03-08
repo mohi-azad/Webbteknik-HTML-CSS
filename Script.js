@@ -15,3 +15,15 @@ document.querySelectorAll(".nav-items a").forEach(link => {
         navMenu.classList.remove("active");
     });
 });
+
+
+const popup = document.getElementById("popup");
+function openPopup() {
+    console.log("openPopup() anropades");
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    console.log("closePopup() anropades");
+    popup.classList.remove("open-popup");
+}

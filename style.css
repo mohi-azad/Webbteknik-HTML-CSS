@@ -130,6 +130,85 @@ nav ul li a:hover{
 	display:block;
 }
 
+/* Layout för sms-rutan */
+.sms-container{
+	margin-top: 7px;
+	background: #1f1d1d;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.sms-box{
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.sms-container button{
+	color: #000000;
+	background-color: #f4eded;
+}
+.sms-container button:hover {
+    background: #405576;
+}
+.popup{
+	width: 340px;
+	background: #060606;
+	background-color: #4dc1ce;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	visibility: hidden;
+	text-align: center;
+	justify-content: center;
+	align-items: center ;
+	padding: 0 30px 30px;
+	color: #080808;
+	transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h1{
+	margin-top: 15px;
+	font-family: "Crimson Text", serif;
+	font-size: 24px;
+	text-align: center;
+	color: #292626;
+}
+.popup p{
+	padding: 3px 0;
+	font-size: 12px;
+	color: #000000;
+	font-family: "Crimson Text", serif;
+	 
+}
+.popup img{
+	border: 1px solid #cfcbcb;
+	width: 150px;
+	margin-top: 10px;
+	align-items: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+.popup button{
+	justify-content: center;
+	text-align: center;
+	width: 80%;
+	margin-top: 40px;
+	padding: 10px 0;
+	color: #000000;
+	background-color:#ebe7e7;
+	font-family: "Crimson Text", serif; 
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
 .c-box22 {
     width: 95%;
     display: flex;
