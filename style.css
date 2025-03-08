@@ -133,7 +133,7 @@ nav ul li a:hover{
 /* Layout för sms-rutan */
 .sms-container{
 	margin-top: 7px;
-	background: #1f1d1d;
+	background: #417b96;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -176,14 +176,14 @@ nav ul li a:hover{
 .popup h1{
 	margin-top: 15px;
 	font-family: "Crimson Text", serif;
-	font-size: 24px;
+	font-size: 28px;
 	text-align: center;
-	color: #292626;
+	color: #191818;
 }
 .popup p{
 	padding: 3px 0;
 	font-size: 12px;
-	color: #000000;
+	color: #131212;
 	font-family: "Crimson Text", serif;
 	 
 }
