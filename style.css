@@ -576,6 +576,35 @@ nav ul li a:hover{
 	font-size: 26px;
 }
 
+/* Styla och fixa layouten för task2 */
+.promo-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: 100%;
+	text-align: center;
+	margin: 15px auto;
+	padding: 15px;
+	border: 15px;
+	color: #000000;
+	background-color: #60deee;
+}
+.promo-title{
+	font-size: 20px;
+	font-family: 'Crimson Pro', serif;
+	margin-top: 10px;
+}
+.promo-text{
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	font-family: "Crimson Text", serif;
+	margin-bottom: 13px;
+}
+
+
 .f-box1{
 	display: flex;
 	flex-wrap: wrap; 
@@ -967,7 +996,6 @@ nav ul li a:hover{
 		max-width: 90%;
 	}
 }
-
 
 /* Portfolio */
 /* Portfolio */
