@@ -18,6 +18,7 @@
 	margin: auto;
 }
 
+/* CSS för nav */
 .navbar{
 	z-index: 1000;
 	position: sticky;
@@ -33,7 +34,45 @@
 	justify-content: space-between; /* sprider ut innehållet så att första och sista element håller sig vid kanterna med mallanrum däremellan */
 	margin: 0;
 }
+.hero nav h3{
+	margin-left: 20px;
+	font-family: 'Crimson Pro', serif;
+}
 
+.h1{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 15px;
+}
+nav ul{
+	display: inline-block;
+	list-style: none;
+	font-size:14px;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li{
+	display: inline-block;
+	list-style: none;
+	margin: 10px 15px;
+	text-decoration: none;	
+	color:black;
+}
+nav ul li a{
+	font-family: 'Crimson Pro', serif;
+	text-decoration: none;
+	color: #000000;
+	font-weight: 400;
+}
+
+nav ul li a:hover{
+	color: #103e77;
+}
+
+.hero-image{
+   width: 100%;
+}
 .hamburger{
 	display: none;
 	cursor: pointer;
@@ -83,45 +122,6 @@
 	}
 }
 
-.hero nav h3{
-	margin-left: 20px;
-	font-family: 'Crimson Pro', serif;
-}
-
-.h1{
-	display: inline-block;
-	list-style: none;
-	margin: 10px 15px;
-}
-nav ul{
-	display: inline-block;
-	list-style: none;
-	font-size:14px;
-	margin: 0;
-	padding: 0;
-}
-
-nav ul li{
-	display: inline-block;
-	list-style: none;
-	margin: 10px 15px;
-	text-decoration: none;	
-	color:black;
-}
-nav ul li a{
-	font-family: 'Crimson Pro', serif;
-	text-decoration: none;
-	color: #000000;
-	font-weight: 400;
-}
-
-nav ul li a:hover{
-	color: #103e77;
-}
-
-.hero-image{
-   width: 100%;
-}
 .hero-image img{
 	margin-top: 36px;
 	width: 100%;
