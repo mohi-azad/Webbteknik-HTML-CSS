@@ -77,30 +77,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const searchLink = document.getElementById("search-link"); // Hämta söklänken
-    const searchBox = document.getElementById("search-box"); // Hämta sökrutan
 
-    // När man klickar på "SÖK", visa sökrutan
-    searchLink.addEventListener("click", function (event) {
-        event.preventDefault(); // Förhindra att länken navigerar
-        searchBox.style.display = "inline-block"; // Visa sökrutan
-        searchBox.focus(); // Sätt fokus i fältet
-    });
+// Task 3.2
+//Funktion för att skapa en bättre interaktion mellan användare och sökrutan.
+function visaSökruta(){
+	const searchBox=document.getElementById("sökruta"); // Hämta sökrutan
+	searchBox.style.display="inline-block"; // visa sökrutan
+	searchBox.style.backgroundColor="#e8f0fe";
+	searchBox.style.border="2px solid #103e77";
+	if(window.innerWidth < 768){
+		searchBox.style.width= "80%";
+	}
+	else {
+		searchBox.style.width="200px";
+	}
+	searchBox.focus();
+}
 
-    // När man klickar bort från sökrutan, dölj den
-    searchBox.addEventListener("blur", function () {
-        searchBox.style.display = "none"; // Dölj sökrutan igen
-    });
+// Dölj sökrutan om man klickar utanför den
+function döljSökruta(event) {
+    const searchBox = document.getElementById("sökruta");
+	const searchLink = document.getElementById("söklänk");
+    if(event.target !== searchBox && event.target !== searchLink && !searchBox.contains(event.target)){
+		searchBox.style.display = "none"; // dölj sökrutan
+	}
+}
 
-    // Förbättring: Lägg till stiländringar vid fokus
-    searchBox.addEventListener("focus", function () {
-        searchBox.style.backgroundColor = "#e8f0fe"; // Ljusblå bakgrund vid fokus
-        searchBox.style.border = "2px solid #103e77"; // Markerad kantlinje
-    });
-
-    searchBox.addEventListener("blur", function () {
-        searchBox.style.backgroundColor = ""; // Återställ bakgrund
-        searchBox.style.border = ""; // Återställ kantlinje
-    });
+// När man klickar på söklänken, visa sökrutan
+document.getElementById("söklänk").addEventListener("click", function (event) {
+    event.preventDefault();
+    visaSökruta();
 });
+
+// Lyssna på klickhändelser för att dölja sökrutan om man klickar utanför
+document.addEventListener("click", döljSökruta);
+
+// Förhindra att sökrutan försvinner när man klickar i den
+document.getElementById("sökruta").addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+

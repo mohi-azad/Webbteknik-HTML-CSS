@@ -1499,6 +1499,30 @@ button:hover {
 	}
 }
 
+/* Gör sökrutan responsiv */
+#sökruta{
+	font-family: "Crimson Text", serif;
+	display: none;
+	margin: 0 auto;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 200px;
+	padding: 5px;
+	font-size: 15px;
+	border-radius: #ccc;
+	border: 1px solid #ccc;
+	transition: all 0.3 ease-in-out;
+}
+@media(max-width:768px){
+	#sökruta{
+
+		width: 80%;
+		font-size: 15px;
+		padding: 8px;
+		text-align: center;
+	}
+}
 
 
 
