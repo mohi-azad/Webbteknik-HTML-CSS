@@ -107,10 +107,13 @@ function döljSökruta(event) {
 document.getElementById("söklänk").addEventListener("click", function (event) {
     event.preventDefault();
     visaSökruta();
+	event.stopPropagation();
 });
 
 // Lyssna på klickhändelser för att dölja sökrutan om man klickar utanför
-document.addEventListener("click", döljSökruta);
+document.addEventListener("click", function(event){
+	döljSökruta(event);
+});
 
 // Förhindra att sökrutan försvinner när man klickar i den
 document.getElementById("sökruta").addEventListener("click", function (event) {

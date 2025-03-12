@@ -1502,7 +1502,7 @@ button:hover {
 /* Gör sökrutan responsiv */
 #sökruta{
 	font-family: "Crimson Text", serif;
-	display: none;
+	display: block;
 	margin: 0 auto;
 	justify-content: center;
 	text-align: center;
