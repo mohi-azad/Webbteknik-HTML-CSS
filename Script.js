@@ -93,7 +93,6 @@ function visaSökruta(){
 	}
 	searchBox.focus();
 }
-
 // Dölj sökrutan om man klickar utanför den
 function döljSökruta(event) {
     const searchBox = document.getElementById("sökruta");
@@ -102,21 +101,64 @@ function döljSökruta(event) {
 		searchBox.style.display = "none"; // dölj sökrutan
 	}
 }
-
 // När man klickar på söklänken, visa sökrutan
 document.getElementById("söklänk").addEventListener("click", function (event) {
     event.preventDefault();
     visaSökruta();
 	event.stopPropagation();
 });
-
 // Lyssna på klickhändelser för att dölja sökrutan om man klickar utanför
 document.addEventListener("click", function(event){
 	döljSökruta(event);
 });
-
 // Förhindra att sökrutan försvinner när man klickar i den
 document.getElementById("sökruta").addEventListener("click", function (event) {
     event.stopPropagation();
+});
+
+
+// Task 4.1
+// Expandering och kollapsing av bilder
+document.addEventListener("DOMContentLoaded", function () {
+    // Bilder
+    const bilderTitleBar = document.querySelector(".bilder .expandable-title-bar");
+    const bilderContent = document.querySelector(".bilder .expandable-content-wrapper");
+    const bilderPortfolio = document.querySelector(".bilder");
+    const bilderIcon = document.querySelector(".bilder .expan-icon");
+    const bilderTitle = bilderTitleBar.querySelector(".expandable-title");
+
+    bilderTitleBar.addEventListener("click", function () {
+        if (bilderContent.style.display === "none" || bilderContent.style.display === "") {
+            bilderContent.style.display = "grid";
+            bilderIcon.setAttribute("name", "chevron-up-outline");
+            bilderPortfolio.appendChild(bilderTitleBar);
+            bilderTitle.textContent = "Se mindre"; // Ändra texten
+        } else {
+            bilderContent.style.display = "none";
+            bilderIcon.setAttribute("name", "chevron-back-outline");
+            bilderPortfolio.insertBefore(bilderTitleBar, bilderContent);
+            bilderTitle.textContent = "Se mer"; // Ändra texten
+        }
+    });
+
+    // Videor
+    const videorTitleBar = document.querySelector(".videor .expandable-title-bar");
+    const videorContent = document.querySelector(".videor .expandable-content-wrapper");
+    const videorPortfolio = document.querySelector(".videor");
+    const videorIcon = document.querySelector(".videor .expan-icon");
+    const videorTitle = videorTitleBar.querySelector(".expandable-title");
+
+    videorTitleBar.addEventListener("click", function () {
+        videorContent.classList.toggle("expanded");
+        if (videorContent.classList.contains("expanded")) {
+            videorIcon.setAttribute("name", "chevron-up-outline");
+            videorPortfolio.appendChild(videorTitleBar);
+            videorTitle.textContent = "Se mindre"; // Ändra texten
+        } else {
+            videorIcon.setAttribute("name", "chevron-back-outline");
+            videorPortfolio.insertBefore(videorTitleBar, videorContent);
+            videorTitle.textContent = "Se mer"; // Ändra texten
+        }
+    });
 });
 

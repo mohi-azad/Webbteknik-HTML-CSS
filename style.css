@@ -1075,7 +1075,6 @@ nav ul li a:hover{
 
 .portfolio {
     width: 85%;
-    min-height: 490px;
     text-align: center; 
     padding: 20px;
     border: 1px solid #e1d7d7;
@@ -1093,7 +1092,7 @@ nav ul li a:hover{
     gap: 20px; 
     justify-items: center;
     align-items: center; 
-    max-width: 900px; 
+
     margin: auto;
 }
 
@@ -1104,44 +1103,88 @@ nav ul li a:hover{
     border-radius: 0px;
 }
 
-.arrow-cont {
+/* CSS för att expandera och kollapsa sidan */
+/* Styling för titelbaren (knappen) */
+.expandable-title-bar {
+    color: #423b3b;
+    margin-top: 25px;
     display: flex;
-    justify-content: center; 
-    margin-top: 20px; 
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: margin-top 0.3s ease-in-out;
 }
-
-.arrow {
-	z-index: 0;
-    margin-top: -49px;
-    margin-bottom: 20px;
+.expandable-title-bar span{
+	font-family: "Crimson Text", serif;
+}
+.expandable-content-wrapper{
+	display: none;
+	grid-template-columns: repeat(2, 1fr); 
+	gap: 20px; 
+    justify-items: center;
+    align-items: center; 
+    max-width: 900px; 
+    margin: auto;
+	transition: al 0.3s ease-in-out;
+}
+.expandable-content-wrapper img{
+	width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    border-radius: 0px;
+}
+.expandable-content-wrapper.expanded{
+	display: grid;
+}
+/* För den ursprungliga videon */
+.videor .po-galleri {
     display: flex;
-    flex-direction: column;
-    width: 35px; 
-    height: 45px;
-    border-radius: 4px; 
-    transition: background-color 0.3s ease; 
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.arrow:hover {
-    background-color: rgba(12, 12, 13, 0.3); 
+/* För den expanderade videon */
+.videor .expandable-content-wrapper {
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-.arrow span {
-    width: 15px;
-    height: 15px;
-    border-bottom: 5px solid #5a5d61;
-    border-right: 5px solid #5a5d61;
-    transform: rotate(45deg);
-    animation: scroll 4s infinite;
+/* Ta bort grid-specifika stilar */
+.videor .po-galleri,
+.videor .expandable-content-wrapper {
+    grid-template-columns: none;
+    gap: 0;
 }
 
-.arrow span:nth-child(2) {
-    animation-delay: -.1s;
+/* Justera videons bredd (valfritt) */
+.videor video {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
 }
+
+/* Visa expanderat innehåll */
+.videor .expandable-content-wrapper.expanded {
+    display: flex;
+}
+
+ 
+.portfolio video{
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	width: 65%;
+	border-radius: 0px;
+}
+
+
 
 @keyframes scroll {
     0% {
@@ -1158,25 +1201,18 @@ nav ul li a:hover{
 }
 
 @media (max-width: 768px) {
-    .po-galleri {
+    .po-galleri, .expandable-content-wrapper{
         grid-template-columns: 1fr; 
         gap: 25px;
     }
-    .po-galleri img {
+    .po-galleri img, .expandable-content-wrapper img {
         width: 90%; 
         max-width: 300px;
     }
 	.po-galleri video {
         max-width: 90%; 
+		justify-content: center;
     }
-}
- 
-.portfolio video{
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	width: 55%;
-	border-radius: 0px;
 }
 
 /* Kontakt */
