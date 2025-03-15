@@ -1,10 +1,11 @@
+// Funktion för att skapa ett antal bilder och rubriker
 document.addEventListener("DOMContentLoaded", function(){
 	// En lista över bilder och beskrivningar till hemsidan.
 	const promotions = [
 		{img: "pic/b1.png", text: "Fånga kärleken och minnen!"},
 		{img: "pic/w1.png", text: "Fånga de bästa blicken på ditt liv!"},
-		{img: "pic/w2.png", text: "Magiska ögonblick - Er bröllopsfotograf!"},
-		{img: "pic/w3.png", text: "Ert sagobröllop - Fångat i tidlösa bilder!"}
+		{img: "pic/w5.png", text: "Magiska ögonblick - Er bröllopsfotograf!"},
+		{img: "pic/w6.png", text: "Ert sagobröllop - Fångat i tidlösa bilder!"}
 	];
 
 	// Användning av const för att slumpa index baserat på antalet objekt i fältet.

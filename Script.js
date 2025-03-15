@@ -1,15 +1,15 @@
-// 
+// Funktion för att skapa "Hamburgermenyn"
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-items");
 
 console.log("Hamburger-element:", hamburger);
 console.log("Nav-items-element:", navMenu);
-
+// Aktivera menyn
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 });
-
+// Stänga menyn
 document.querySelectorAll(".nav-items a").forEach(link => {
     link.addEventListener("click", () => {
         hamburger.classList.remove("active");
@@ -17,13 +17,13 @@ document.querySelectorAll(".nav-items a").forEach(link => {
     });
 });
 
-
+// Funktion för att öppna sms-boxen
 const popup = document.getElementById("popup");
 function openPopup() {
     console.log("openPopup() anropades");
     popup.classList.add("open-popup");
 }
-
+// Funktion för att stänga sms-boxen
 function closePopup() {
     console.log("closePopup() anropades");
     popup.classList.remove("open-popup");
@@ -34,48 +34,38 @@ function closePopup() {
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
 
-    // Variabel för att lagra den slumpmässiga färgen för navbaren
-    let navbarColor = "";
-    const originalColor = "#f9f6f6";  // Ursprunglig bakgrundsfärg
+    // Fast färg för navbar och länkar
+    const hoverColor = "#3498db"; // En blå färg exempel, byt denna efter önskemål
+    const originalColor = "#f9f6f6";  // Ursprunglig bakgrundsfärg på navbaren
 
-    // Funktion för att skapa en slumpmässig färg i RGB-format
-    function getRandomColor() {
-        let r = Math.floor(Math.random() * 256); // Röd komponent (0-255)
-        let g = Math.floor(Math.random() * 256); // Grön komponent (0-255)
-        let b = Math.floor(Math.random() * 256); // Blå komponent (0-255)
-        return `rgb(${r}, ${g}, ${b})`; // Returnera färgen i RGB-format
-    }
-
-    // Funktion: Ändra färg på navbar när musen pekar på den
+    // Funktion: Ändra navbar bakgrundsfärg vid hover
     navbar.addEventListener("mouseover", function () {
-        if (!navbarColor) { // Om navbarColor inte har satts tidigare
-            navbarColor = getRandomColor(); // Sätt en slumpmässig färg
-        }
-        this.style.backgroundColor = navbarColor; // Använd den slumpmässiga färgen
+        this.style.backgroundColor = hoverColor; // Använd den fasta färgen
         this.style.transition = "background-color 0.3s ease-in-out"; // Mjuk övergång
     });
 
     navbar.addEventListener("mouseout", function () {
-        this.style.backgroundColor = originalColor; // Återställ till originalfärgen när musen lämnar
+        this.style.backgroundColor = originalColor; // Återställ original färgen vid mouseout
     });
 
     // Funktion: Hover-effekt på navigationslänkar
     document.querySelectorAll(".nav-items li a").forEach(link => {
         link.addEventListener("mouseover", function () {
-            this.style.color = getRandomColor(); // Slumpmässig textfärg
-            this.style.backgroundColor = getRandomColor(); // Slumpmässig bakgrundsfärg
+            this.style.color = hoverColor; // Använd samma färg för text
+            this.style.backgroundColor = hoverColor; // Använd samma färg för bakgrund
             this.style.padding = "5px 10px";
             this.style.borderRadius = "5px";
         });
 
         link.addEventListener("mouseout", function () {
-            this.style.color = "";
-            this.style.backgroundColor = "";
+            this.style.color = ""; // Återställ färgen vid mouseout
+            this.style.backgroundColor = ""; // Återställ bakgrundsfärgen vid mouseout
             this.style.padding = "";
             this.style.borderRadius = "";
         });
     });
 });
+
 
 
 // Task 3.2
@@ -161,6 +151,26 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+// Funktion för att skapa hover-effekt till bilder och videor
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".hover-image, .po-galleri video, .expandable-content-wrapper video").forEach(element => {
+        element.addEventListener("mouseover", function () {
+            this.style.transform = "scale(1.05)";  // Förstorar
+            this.style.transition = "transform 0.3s ease-in-out"; // Mjuk animering
+            this.style.filter = "brightness(1.2)"; // Ökar ljusstyrka
+            this.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)"; // Skugga
+        });
+
+        element.addEventListener("mouseout", function () {
+            this.style.transform = "scale(1)";  // Återställ storlek
+            this.style.filter = "brightness(1.05)"; // Återställ ljusstyrka
+            this.style.boxShadow = "none"; // Tar bort skugga
+        });
+    });
+});
+ 
 
 
 
