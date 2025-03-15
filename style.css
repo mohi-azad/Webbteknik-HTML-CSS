@@ -9,7 +9,7 @@
 	width: 100%;
 	min-height: 100vh;
 	background-position: center;
-	background-color: rgb(250, 247, 247);
+	background-color: rgb(248, 249, 249);
 	background-size: cover; 
 	padding: 20px;
 }
@@ -69,10 +69,39 @@ nav ul li a{
 nav ul li a:hover{
 	color: #103e77;
 }
-
-.hero-image{
-   width: 100%;
+.hero-image {
+    position: relative; /* Viktigt för att texten ska ligga över bilden */
+    display: inline-block;
+	width: 100%;
 }
+
+.promo-text {
+	font-family: 'Crimson Pro', serif;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(63, 61, 61);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.hero-image h1{
+	font-size: 26px;
+}
+.promo-image {
+    display: block;
+    width: 100%;
+	
+	object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.promo-image:hover {
+    transform: scale(1.05);
+}
+
 .hamburger{
 	display: none;
 	cursor: pointer;
@@ -132,9 +161,7 @@ nav ul li a:hover{
 
 /* Layout för sms-rutan */
 .sms-container{
-	margin-top: 7px;
-	background: #417b96;
-	display: flex;
+	display: inline-block;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
@@ -145,18 +172,15 @@ nav ul li a:hover{
 }
 .sms-container button{
 	color: #000000;
-	background-color: #f4eded;
-}
-.sms-container button:hover {
-    background: #405576;
+	background-color:#e8e5e5;
 }
 .popup{
 	width: 340px;
 	background: #060606;
 	background-color: #4dc1ce;
 	border-radius: 5px;
-	position: absolute;
-	top: 0;
+	position: fixed;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%) scale(0.1);
 	visibility: hidden;
@@ -166,6 +190,7 @@ nav ul li a:hover{
 	padding: 0 30px 30px;
 	color: #080808;
 	transition: transform 0.4s, top 0.4s;
+	
 }
 .open-popup{
 	visibility: visible;
@@ -174,7 +199,7 @@ nav ul li a:hover{
 }
 
 .popup h1{
-	margin-top: 15px;
+	margin-top: 45px;
 	font-family: "Crimson Text", serif;
 	font-size: 28px;
 	text-align: center;
@@ -575,35 +600,6 @@ nav ul li a:hover{
 	font-family: 'Crimson Pro', serif;
 	font-size: 26px;
 }
-
-/* Styla och fixa layouten för task2 */
-.promo-container{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	width: 100%;
-	text-align: center;
-	margin: 15px auto;
-	padding: 15px;
-	border: 15px;
-	color: #000000;
-	background-color: #60deee;
-}
-.promo-title{
-	font-size: 20px;
-	font-family: 'Crimson Pro', serif;
-	margin-top: 10px;
-}
-.promo-text{
-	text-align: center;
-	justify-content: center;
-	align-items: center;
-	font-family: "Crimson Text", serif;
-	margin-bottom: 13px;
-}
-
 
 .f-box1{
 	display: flex;
@@ -1074,7 +1070,7 @@ nav ul li a:hover{
 }
 
 .portfolio {
-    width: 85%;
+    width: 90%;
     text-align: center; 
     padding: 20px;
     border: 1px solid #e1d7d7;
@@ -1129,7 +1125,6 @@ nav ul li a:hover{
 	gap: 20px; 
     justify-items: center;
     align-items: center; 
-    max-width: 900px; 
     margin: auto;
 	transition: al 0.3s ease-in-out;
 }

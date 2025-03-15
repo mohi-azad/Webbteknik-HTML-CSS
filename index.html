@@ -34,6 +34,17 @@
 				<!-- Skapa en textruta för att skriva in texter -->
 				<li><a href="#" id="söklänk">SÖK</a></li>
 				<input type="text" id="sökruta" placeholder="Sök här..." style="display: none;" onfocus="showSearchbox()" onblur="hideSearchbox()">
+				<!--Knapp för att visa meddelandet "Hello,JavaScript!"-->
+				<div class="sms-container">
+					<button type="show-message" class="sms-box" onclick="openPopup()">Show Message</button>
+				<!-- En klass för att hålla alla interna element inuti sig själv -->
+					<div class="popup" id="popup">
+						<img src="pic/hello.png"> 
+						<h1>Hello, JavaScript!</h1>
+						<p>Click the button below to go back.</p>
+						<button type="button" onclick="closePopup()">OK</button>
+					</div>
+				</div>
             </ul>
 			<div class="hamburger">
 				<span class="bar"></span>
@@ -41,23 +52,13 @@
 				<span class="bar"></span>
 			</div>
         </nav>
-	
+		
+		<!-- Tillägg av klassen som har krävande innehåll.-->
 		<div class="hero-image">
-			<img src= "pic/b1.png" alt="bild1" >
+			<h1 id="promo-text" class="promo-text"> </h1>
+			<img id="promo-image" class="promo-image" src="" alt=""> 
 		</div>
-
-
-		<!--Knapp för att visa meddelandet "Hello,JavaScript!"-->
-		<div class="sms-container">
-			<button type="show-message" class="sms-box" onclick="openPopup()">Show Message</button>
-			<!-- En klass för att hålla alla interna element inuti sig själv -->
-			<div class="popup" id="popup">
-				<img src="pic/hello.png"> 
-				<h1>Hello, JavaScript!</h1>
-				<p>Click the button below to go back.</p>
-				<button type="button" onclick="closePopup()">OK</button>
-			</div>
-		</div>
+		<script src="randomizer.js"></script>
  
 		<br><br><br>
 
