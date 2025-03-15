@@ -147,7 +147,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const videorPortfolio = document.querySelector(".videor");
     const videorIcon = document.querySelector(".videor .expan-icon");
     const videorTitle = videorTitleBar.querySelector(".expandable-title");
-
     videorTitleBar.addEventListener("click", function () {
         videorContent.classList.toggle("expanded");
         if (videorContent.classList.contains("expanded")) {
@@ -172,7 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
             this.style.filter = "brightness(1.2)"; // Ökar ljusstyrka
             this.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)"; // Skugga
         });
-
         element.addEventListener("mouseout", function () {
             this.style.transform = "scale(1)";  // Återställ storlek
             this.style.filter = "brightness(1.05)"; // Återställ ljusstyrka
@@ -181,6 +179,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
  
+// Funktion för att expandera och kollapsa tidstabellen
+document.addEventListener("DOMContentLoaded", function () {
+    // Hitta alla månadselement
+    const months = document.querySelectorAll(".m-item");
+    months.forEach(month => {
+        // Lägg till en klickhändelse för varje månad
+        month.addEventListener("click", function () {
+            // Toggle "expanded" klass på månadselementet
+            this.classList.toggle("expanded");
+            // Byt ikonen till "remove-outline" när expanderat, annars tillbaka till "add-outline"
+            const icon = this.querySelector(".expand-icon");
+            if (this.classList.contains("expanded")) {
+                icon.setAttribute("name", "remove-outline");
+            } else {
+                icon.setAttribute("name", "add-outline");
+            }
+        });
+    });
+});
 
 
 

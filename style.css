@@ -1555,6 +1555,24 @@ button:hover {
 	}
 }
 
+.m-detaljer {
+    display: none; /* Döljer detaljerna från början */
+    margin-top: 10px;
+}
+
+.expand-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.m-item.expanded .m-detaljer {
+    display: block; /* Visar detaljer när elementet har klassen expanded */
+}
+
+.m-item.expanded .expand-icon {
+    content: "remove-outline"; /* Byt till remove-outline ikonen när det är expanderat */
+}
+
 
 
 

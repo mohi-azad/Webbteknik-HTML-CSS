@@ -7,10 +7,8 @@ document.addEventListener("DOMContentLoaded", function(){
 		{img: "pic/w5.png", text: "MAGISKA ÖGONBLICK - ER BRÖLLOPSFOTOGRAF!"},
 		{img: "pic/w6.png", text: "EET SAGABRÖLLOP - FÅNGATI TIDLÖSA BILDER!"}
 	];
-
 	// Användning av const för att slumpa index baserat på antalet objekt i fältet.
 	const randomIndex = Math.floor(Math.random() * promotions.length);
-
 	// Uppdatera bild och text i bannern.
 	document.getElementById("promo-text").innerText = promotions[randomIndex].text;
 	document.getElementById("promo-image").src = promotions[randomIndex].img;
