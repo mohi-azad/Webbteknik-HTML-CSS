@@ -78,7 +78,7 @@ nav ul li a:hover{
 .promo-text {
 	font-family: 'Crimson Pro', serif;
     position: absolute;
-    top: 20%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(63, 61, 61);
@@ -89,7 +89,7 @@ nav ul li a:hover{
     border-radius: 5px;
 }
 .hero-image h1{
-	font-size: 26px;
+	font-size: 24px;
 }
 .promo-image {
     display: block;
@@ -172,7 +172,7 @@ nav ul li a:hover{
 }
 .sms-container button{
 	color: #000000;
-	background-color:#e8e5e5;
+	background-color:#f9f6f6;
 }
 .popup{
 	width: 340px;

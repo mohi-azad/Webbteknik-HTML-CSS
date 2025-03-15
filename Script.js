@@ -34,38 +34,48 @@ function closePopup() {
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
 
-    // Fast färg för navbar och länkar
-    const hoverColor = "#3498db"; // En blå färg exempel, byt denna efter önskemål
-    const originalColor = "#f9f6f6";  // Ursprunglig bakgrundsfärg på navbaren
+    // Variabel för att lagra den slumpmässiga färgen för navbaren
+    let navbarColor = "";
+    const originalColor = "#f9f6f6";  // Ursprunglig bakgrundsfärg
 
-    // Funktion: Ändra navbar bakgrundsfärg vid hover
+    // Funktion för att skapa en slumpmässig färg i RGB-format
+    function getRandomColor() {
+        let r = Math.floor(Math.random() * 256); // Röd komponent (0-255)
+        let g = Math.floor(Math.random() * 256); // Grön komponent (0-255)
+        let b = Math.floor(Math.random() * 256); // Blå komponent (0-255)
+        return `rgb(${r}, ${g}, ${b})`; // Returnera färgen i RGB-format
+    }
+
+    // Funktion: Ändra färg på navbar när musen pekar på den
     navbar.addEventListener("mouseover", function () {
-        this.style.backgroundColor = hoverColor; // Använd den fasta färgen
+        if (!navbarColor) { // Om navbarColor inte har satts tidigare
+            navbarColor = getRandomColor(); // Sätt en slumpmässig färg
+        }
+        this.style.backgroundColor = navbarColor; // Använd den slumpmässiga färgen
         this.style.transition = "background-color 0.3s ease-in-out"; // Mjuk övergång
     });
 
     navbar.addEventListener("mouseout", function () {
-        this.style.backgroundColor = originalColor; // Återställ original färgen vid mouseout
+        this.style.backgroundColor = originalColor; // Återställ till originalfärgen när musen lämnar
     });
 
     // Funktion: Hover-effekt på navigationslänkar
     document.querySelectorAll(".nav-items li a").forEach(link => {
         link.addEventListener("mouseover", function () {
-            this.style.color = hoverColor; // Använd samma färg för text
-            this.style.backgroundColor = hoverColor; // Använd samma färg för bakgrund
+            this.style.color = getRandomColor(); // Slumpmässig textfärg
+            this.style.backgroundColor = getRandomColor(); // Slumpmässig bakgrundsfärg
             this.style.padding = "5px 10px";
             this.style.borderRadius = "5px";
         });
 
         link.addEventListener("mouseout", function () {
-            this.style.color = ""; // Återställ färgen vid mouseout
-            this.style.backgroundColor = ""; // Återställ bakgrundsfärgen vid mouseout
+            this.style.color = "";
+            this.style.backgroundColor = "";
             this.style.padding = "";
             this.style.borderRadius = "";
         });
     });
 });
-
 
 
 // Task 3.2
