@@ -2,10 +2,10 @@
 document.addEventListener("DOMContentLoaded", function(){
 	// En lista över bilder och beskrivningar till hemsidan.
 	const promotions = [
-		{img: "pic/b1.png", text: "Fånga kärleken och minnen!"},
-		{img: "pic/w1.png", text: "Fånga de bästa blicken på ditt liv!"},
-		{img: "pic/w5.png", text: "Magiska ögonblick - Er bröllopsfotograf!"},
-		{img: "pic/w6.png", text: "Ert sagobröllop - Fångat i tidlösa bilder!"}
+		{img: "pic/b1.png", text: "FÅNGA KÄRLEKEN OCH MINNEN!"},
+		{img: "pic/w1.png", text: "FÅNGA DE BÄSTA BLICKEN I LIVET!"},
+		{img: "pic/w5.png", text: "MAGISKA ÖGONBLICK - ER BRÖLLOPSFOTOGRAF!"},
+		{img: "pic/w6.png", text: "EET SAGABRÖLLOP - FÅNGATI TIDLÖSA BILDER!"}
 	];
 
 	// Användning av const för att slumpa index baserat på antalet objekt i fältet.
@@ -17,19 +17,5 @@ document.addEventListener("DOMContentLoaded", function(){
 
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const promotions = [
-        { img: "pic/b1.png", text: "Fånga kärleken och minnen!" },
-        { img: "pic/w1.png", text: "Fånga de bästa blicken på ditt liv!" },
-        { img: "pic/w2.png", text: "Magiska ögonblick - Er bröllopsfotograf!" },
-        { img: "pic/w3.png", text: "Fånga kärleken och minnen!" }
-    ];
 
-    const randomIndex = Math.floor(Math.random() * promotions.length);
-    const promoText = document.getElementById("promo-text");
-    const promoImage = document.getElementById("promo-image");
-
-    promoText.innerText = promotions[randomIndex].text;
-    promoImage.src = promotions[randomIndex].img;
-});
 
