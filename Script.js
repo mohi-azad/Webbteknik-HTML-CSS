@@ -33,32 +33,27 @@ function closePopup() {
 // Funktiona för att skapa hover-effekt på navigationsrutan.
 document.addEventListener("DOMContentLoaded", function () {
     const navbar = document.querySelector(".navbar");
-
     // Variabel för att lagra den slumpmässiga färgen för navbaren
     let navbarColor = "";
-    const originalColor = "#f9f6f6";  // Ursprunglig bakgrundsfärg
-
+    const originalColor = "#f9f6f6";  
     // Funktion för att skapa en slumpmässig färg i RGB-format
     function getRandomColor() {
-        let r = Math.floor(Math.random() * 256); // Röd komponent (0-255)
-        let g = Math.floor(Math.random() * 256); // Grön komponent (0-255)
-        let b = Math.floor(Math.random() * 256); // Blå komponent (0-255)
-        return `rgb(${r}, ${g}, ${b})`; // Returnera färgen i RGB-format
+        let r = Math.floor(Math.random() * 256); 
+        let g = Math.floor(Math.random() * 256); 
+        let b = Math.floor(Math.random() * 256); 
+        return `rgb(${r}, ${g}, ${b})`;
     }
-
-    // Funktion: Ändra färg på navbar när musen pekar på den
+    // ändra färg på navbar när musen pekar på den
     navbar.addEventListener("mouseover", function () {
-        if (!navbarColor) { // Om navbarColor inte har satts tidigare
-            navbarColor = getRandomColor(); // Sätt en slumpmässig färg
+        if (!navbarColor) { 
+            navbarColor = getRandomColor(); 
         }
-        this.style.backgroundColor = navbarColor; // Använd den slumpmässiga färgen
-        this.style.transition = "background-color 0.3s ease-in-out"; // Mjuk övergång
+        this.style.backgroundColor = navbarColor; 
+        this.style.transition = "background-color 0.3s ease-in-out"; 
     });
-
     navbar.addEventListener("mouseout", function () {
-        this.style.backgroundColor = originalColor; // Återställ till originalfärgen när musen lämnar
+        this.style.backgroundColor = originalColor; // återställ till originalfärgen när musen lämnar
     });
-
     // Funktion: Hover-effekt på navigationslänkar
     document.querySelectorAll(".nav-items li a").forEach(link => {
         link.addEventListener("mouseover", function () {
@@ -67,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
             this.style.padding = "5px 10px";
             this.style.borderRadius = "5px";
         });
-
         link.addEventListener("mouseout", function () {
             this.style.color = "";
             this.style.backgroundColor = "";
@@ -118,9 +112,24 @@ document.getElementById("sökruta").addEventListener("click", function (event) {
 
 
 // Task 4.1
+// Användning av fadeTo() till navbaren
+$(document).ready(function(){
+	$(".navbar").hover(
+		// synlighet för navbaren när musen pekar på den
+		function(){
+			$(this).fadeTo(300, 0.9);
+		},
+		//synlighet för navbaren när musen pekar bort från den.
+		function(){
+			$(this).fadeTo(300, 1);
+		}
+	);
+});
+
+
+// Task 4.2
 // Expandering och kollapsing av bilder
 document.addEventListener("DOMContentLoaded", function () {
-    // Bilder
     const bilderTitleBar = document.querySelector(".bilder .expandable-title-bar");
     const bilderContent = document.querySelector(".bilder .expandable-content-wrapper");
     const bilderPortfolio = document.querySelector(".bilder");
@@ -132,12 +141,12 @@ document.addEventListener("DOMContentLoaded", function () {
             bilderContent.style.display = "grid";
             bilderIcon.setAttribute("name", "chevron-up-outline");
             bilderPortfolio.appendChild(bilderTitleBar);
-            bilderTitle.textContent = "Se mindre"; // Ändra texten
+            bilderTitle.textContent = "Se mindre"; 
         } else {
             bilderContent.style.display = "none";
             bilderIcon.setAttribute("name", "chevron-back-outline");
             bilderPortfolio.insertBefore(bilderTitleBar, bilderContent);
-            bilderTitle.textContent = "Se mer"; // Ändra texten
+            bilderTitle.textContent = "Se mer"; 
         }
     });
 
