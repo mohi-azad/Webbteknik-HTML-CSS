@@ -117,11 +117,11 @@ $(document).ready(function(){
 	$(".navbar").hover(
 		// synlighet för navbaren när musen pekar på den
 		function(){
-			$(this).fadeTo(300, 0.9);
+			$(this).fadeTo(300, 1);
 		},
 		//synlighet för navbaren när musen pekar bort från den.
 		function(){
-			$(this).fadeTo(300, 1);
+			$(this).fadeTo(300, 0.8);
 		}
 	);
 });
