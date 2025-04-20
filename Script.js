@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const bilderPortfolio = document.querySelector(".bilder");
     const bilderIcon = document.querySelector(".bilder .expan-icon");
     const bilderTitle = bilderTitleBar.querySelector(".expandable-title");
-
+	// kontrolera muspekaren på displayen
     bilderTitleBar.addEventListener("click", function () {
         if (bilderContent.style.display === "none" || bilderContent.style.display === "") {
             bilderContent.style.display = "grid";
