@@ -1643,5 +1643,38 @@ button:hover {
     font-size: 18px;
 }
 
+/* Byta tema */
+/* Mörkt läge */
+.morkt-lage {
+	background-color: #121212;
+	color: #f0f0f0;
+}
+.morkt-lage a {
+	color: #a7cfff;
+}
+.morkt-lage .navbar,
+.morkt-lage .footer,
+.morkt-lage .hero,
+.morkt-lage .wellcome-box,
+.morkt-lage .container,
+.morkt-lage .info-box,
+.morkt-lage .meet-box {
+	background-color: #1e1e1e;
+	color: #ffffff;
+}
+.morkt-lage .btn,
+.morkt-lage button {
+	background-color: #333;
+	color: #fff;
+	border: 1px solid #555;
+}
+.tema-knapp {
+	background: none;
+	border: none;
+	font-size: 1rem;
+	cursor: pointer;
+	color: inherit;
+}
+  
 
 

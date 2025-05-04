@@ -209,6 +209,30 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// en funktion för att byta tema
+function byttema() {
+	document.body.classList.toggle("morkt-lage");
+	const knapp = document.querySelector('.tema-knapp');
+	const ärMörkt = document.body.classList.contains("morkt-lage");
+	knapp.innerHTML = ärMörkt ? "Ljust" : "Mörkt";
+	localStorage.setItem("tema", ärMörkt ? "morkt" : "ljus");
+  }
+  
+  window.onload = function () {
+	const tidigareTema = localStorage.getItem("tema");
+	if (tidigareTema === "morkt") {
+	  document.body.classList.add("morkt-lage");
+	}
+	const knapp = document.querySelector('.tema-knapp');
+	if (knapp) {
+	  knapp.innerHTML = document.body.classList.contains("morkt-lage") 
+		? "Ljust" 
+		: "Mörkt";
+	}
+  };
+  
+
+
 
 
 
